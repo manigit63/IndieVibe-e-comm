@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
+
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+
+/* From Uiverse.io by Abdulahuwu1 */ 
+.btn {
+  --color: #E17100;
+  --color2: #ffffff;
+  padding: 0.2em 0.75em;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #FDC700;
+  transition: 1.2s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 0.9rem;
+  /* font-family: cursive; */
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
+}
+
+.btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+  color: var(--color2);
+}
+
+.btn:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
+  border: 2px solid #FDC700;
+}
+
+
+
+/* ---------------- button ----------- */
+
+
+button:active {
+  transform: scale(0.96); /* make btn small */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* shadow  soft hogi */
+}
