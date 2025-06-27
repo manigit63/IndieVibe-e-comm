@@ -1,3 +1,67 @@
+*sorting krni h based on prize.//// discount,rating ✅
+*bannerslideshow ✅
+
+*signup page pr puri myntra jesi required detail ✅
+add to cart btn ko function krna h bhr ble. ✅
+*signin pr navbar hide. ✅
+*dark mode daalna hai... 
+*menu add krna h :: search & logo only and ||| dikhe bas
+
+pagination)
+button dabte huy dikhe har jgha...... ✅
+*GSAP
+*animation
+*font changes (optional)
+
+*responsive bnana h.
+*deploy
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+
+*title naam decide.. #
+*theme should be diffrent. #
+
+
+
+*********************
+*jsonApi mai disocunt or rating add krni h >>> rating n h
+ui mai bhi dikhana h same.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
