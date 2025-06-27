@@ -4,6 +4,17 @@
 @import "swiper/css";
 @import "swiper/css/pagination";
 
+/* dark  mode */
+body.dark {
+  background: #18181b;
+  color: #fff;
+}
+body {
+  background: #fff;
+  color: #18181b;
+}
+
+
 
 /* From Uiverse.io by Abdulahuwu1 */ 
 .btn {

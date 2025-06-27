@@ -2,22 +2,28 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchTerm } from "../store/reducers/ProductSlice";
+import { useDarkMode } from "../context/DarkModeContext";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.userReducer);
   // console.log(user);
+  const { darkMode, setDarkMode } = useDarkMode(); // for dark mode
 
   const activeStyle = "text-amber-700 font-bold hover:border-b ";
   const baseStyle = " transition font-semibold hover:border-b";
 
   return (
-    <nav className=" shadow-md px-20 py-3 flex items-center justify-between">
-      {/* Logo Section */}
-      <div className="flex items-center gap-2">
+    <nav className="shadow-md px-20 py-3 flex items-center justify-between ">
+      {/* ...rest of navbar... */}
+
+      {/* Logo */}
+
+      <NavLink to="/" className="flex items-center gap-2">
         <i className="ri-shopping-bag-4-fill text-3xl text-amber-600"></i>
         <span className="text-xl font-bold text-gray-800">ShopNEst</span>
-      </div>
+      </NavLink>
+
       {/* Search Bar */}
       <div className="flex-1 mx-10 max-w-md">
         <div className="relative">
@@ -30,6 +36,10 @@ const Navbar = () => {
           <i className="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg"></i>
         </div>
       </div>
+
+      <button onClick={() => setDarkMode((prev) => !prev)}>
+        {darkMode ? "🌙" : "☀️"}
+      </button>
 
       <div className="flex items-center gap-5">
         {/* Main Navigation Links */}

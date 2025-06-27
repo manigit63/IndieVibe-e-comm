@@ -36,16 +36,19 @@ const Product = () => {
     }
   };
 
-  // Real-time search and filter logic.............................
+  // Real-time search and filter sort logic.............................
 
   const filteredProducts = useMemo(() => {
     return [...products]
       .filter((p) => {
+        // search logic / title based
         const matchesTitle =
           typeof p.title === "string" &&
           p.title.toLowerCase().includes(searchTerm?.toLowerCase() || "");
+        // filter logic / category based
         const matchesCategory =
           categoryFilter === "" || p.category === categoryFilter;
+        
         return matchesTitle && matchesCategory;
       })
       .sort((a, b) => {
@@ -84,7 +87,7 @@ const Product = () => {
               onClick={() =>
                 dispatch(setCategoryFilter(category === "All" ? "" : category))
               }
-              className="btn px-4 py-1 rounded-md border text-sm font-medium bg-white hover:bg-amber-300 transition">
+              className="btn px-4 py-1 rounded-md border text-sm font-medium bg-white hover:bg-amber-300 transition active:scale-65 active:bg-amber-400">
               {category}
             </button>
           ))}
@@ -113,7 +116,7 @@ const Product = () => {
       <div className="flex-1 relative z-10 -mt-3 ">
         <InfiniteScroll
           dataLength={filteredProducts.length}
-          next={searchTerm ? () => {} : fetchProduct}
+          next={searchTerm ? () => {} : fetchProduct} 
           hasMore={!searchTerm && hasMore}
           loader={<h4 className="text-center">Loading...</h4>}
           endMessage={
@@ -131,10 +134,24 @@ const Product = () => {
             ) : (
               <div className="text-gray-500 text-xl mt-10 text-center w-full">
                 No products found for "<strong>{searchTerm}</strong>"
-              </div>
+              </div>  
             )}
           </div>
         </InfiniteScroll>
+      </div>
+      
+      {/*footer banner */}
+      <div className="flex w-full h-[40vh]">
+        <img
+          src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2025/6/24/dff9e0c5-2617-47bb-8153-f0331bd095301750776844057-Clearance-Sale-Desktop-KV_01.gif"
+          alt=""
+          className="w-1/2 "
+        />
+        <img
+          src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2025/6/24/c4894bd7-e62d-461c-8d64-ec7910e0e4dc1750776844032-Clearance-Sale-Desktop-KV_02.gif"
+          alt=""
+          className="w-1/2 "
+        />
       </div>
 
       {/* 👇 Footer at bottom */}

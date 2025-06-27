@@ -6,6 +6,7 @@ import { asyncLoadProduct } from "./store/actions/ProductAction";
 import { asyncCurrentUser } from "./store/actions/UserAction";
 import { useLocation } from "react-router-dom"; // 🔸 Step 1: Import location
 
+
 function App() {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.userReducer);
