@@ -19,7 +19,11 @@ const Mainroutes = () => {
       <Routes>
         <Route path="/" element={<Product />} />
         <Route path="/about" element={<About />} />
+        <Route path="/product-info/:id" element={<ProductDetails />} />
+        <Route path="/contact" element={<Contact />} />
 
+
+        {/* Auth Routes */}
         <Route
           path="/signup"
           element={
@@ -52,7 +56,6 @@ const Mainroutes = () => {
             </Auth>
           }
         />
-
         <Route
           path="/cart"
           element={
@@ -62,8 +65,7 @@ const Mainroutes = () => {
           }
         />
 
-        <Route path="/product-info/:id" element={<ProductDetails />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* wildcard */}
         <Route path="*" element={<PagenotFound />} />
       </Routes>
     </div>

@@ -4,19 +4,25 @@
 @import "swiper/css";
 @import "swiper/css/pagination";
 
-/* dark  mode */
-body.dark {
+/* dark  mode -----------------------------------------*/
+body.dark  {
   background: #18181b;
   color: #fff;
 }
-body {
+body ,option{
   background: #fff;
   color: #18181b;
 }
 
+.crousal-gradient {
+  background: linear-gradient(to top, #fff, rgba(244,244,245,0.7), transparent);
+}
+body.dark .crousal-gradient {
+  background: linear-gradient(to top, #18181b, rgba(39,39,42,0.7), transparent);
+}
 
 
-/* From Uiverse.io by Abdulahuwu1 */ 
+/* btn styling ---------------------------------- */ 
 .btn {
   --color: #E17100;
   --color2: #ffffff;
@@ -84,3 +90,45 @@ button:active {
   transform: scale(0.96); /* make btn small */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* shadow  soft hogi */
 }
+
+
+/* custom Animation ---------------------------------*/
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  height: 2rem; 
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.25rem;
+  animation: scroll-left 22s linear infinite;
+}
+
+.marquee.reverse {
+  animation: scroll-right 22s linear infinite;
+  color: #fbbf24; /* amber-400 */
+}
+
+@keyframes scroll-left {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
+

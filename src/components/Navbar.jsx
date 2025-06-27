@@ -21,7 +21,7 @@ const Navbar = () => {
 
       <NavLink to="/" className="flex items-center gap-2">
         <i className="ri-shopping-bag-4-fill text-3xl text-amber-600"></i>
-        <span className="text-xl font-bold text-gray-800">ShopNEst</span>
+        <span className="text-xl font-bold ">ShopNEst</span>
       </NavLink>
 
       {/* Search Bar */}
@@ -33,12 +33,12 @@ const Navbar = () => {
             className="w-full pl-10 pr-4 py-2 border rounded-full shadow-sm focus:outline-none  "
             onChange={(e) => dispatch(setSearchTerm(e.target.value))}
           />
-          <i className="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg"></i>
+          <i className="ri-search-line absolute left-3 top-1/2 -translate-y-1/2  text-lg"></i>
         </div>
       </div>
 
-      <button onClick={() => setDarkMode((prev) => !prev)}>
-        {darkMode ? "🌙" : "☀️"}
+      <button onClick={() => setDarkMode((prev) => !prev)} className="text-2xl">
+        {darkMode ? "◑" : "◐"}
       </button>
 
       <div className="flex items-center gap-5">
