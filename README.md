@@ -1,13 +1,21 @@
+Developer Standared
+
+layot 
+
 *sorting krni h based on prize.//// discount,rating ✅
 *bannerslideshow ✅
 
 *signup page pr puri myntra jesi required detail ✅
 add to cart btn ko function krna h bhr ble. ✅
 *signin pr navbar hide. ✅
-*dark mode daalna hai... 
-*menu add krna h :: search & logo only and ||| dikhe bas
+*dark mode daalna hai...  {cart | product create | setting}
+*menu add krna h :: search & logo only and ||| dikhe bas { cart icon bahar }
 
 pagination)
+
+
+>>>>>>>> styling >>>>>>>>>>>>>
+
 button dabte huy dikhe har jgha...... ✅
 *GSAP
 *animation
