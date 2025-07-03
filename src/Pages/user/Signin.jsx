@@ -42,7 +42,7 @@ const Signin = () => {
                 type="email"
                 placeholder="you@example.com"
                 {...register("email", { required: true })}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:outline-none focus:border-black"
+                className="w-full px-4 py-3 rounded-xl border-2 text-zinc-800 text-shadow-2xs  border-gray-200 focus:outline-none focus:border-black"
               />
               {errors.email && (
                 <p className="text-sm text-red-500 mt-1">Email is required.</p>
@@ -57,7 +57,7 @@ const Signin = () => {
                 type="password"
                 placeholder="••••••••"
                 {...register("password", { required: true })}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:outline-none focus:border-black"
+                className="w-full px-4 py-3 text-zinc-800 text-shadow-2xs rounded-xl border-2 border-gray-200 focus:outline-none focus:border-black"
               />
               {errors.password && (
                 <p className="text-sm text-red-500 mt-1">
