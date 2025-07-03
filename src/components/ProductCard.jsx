@@ -22,7 +22,7 @@ const ProductCard = ({ p }) => {
     <div
       title={p.title}
       key={p.id}
-      className="w-[22%] p-2 mb-2 hover:shadow-2xl shadow-md  rounded">
+      className="w-[22%] p-2 mb-2 hover:shadow-2xl hover:scale-105 transition-all shadow-md  rounded">
       <img className="h-[30vh] mx-auto block" src={p.image} alt="" />
       <h1 className="mt-3 text-2xl">{p.title.slice(0, 15)}...</h1>
       <p className="text-red-400 font-semibold">

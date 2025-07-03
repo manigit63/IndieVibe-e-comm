@@ -13,6 +13,7 @@ import ScrollEndoffer from "./offers/ScrollEndoffer";
 import useFilteredProducts from "../customHooks/useFilteredProducts";
 import CategoryFilter from "../components/CategoryFilter";
 import SortDropdown from "../components/SortDropdown";
+import Banner from "./offers/Banner";
 
 const ProductCard = lazy(() => import("../components/ProductCard"));
 
@@ -56,6 +57,7 @@ const Product = () => {
       {/* carousel */}
       <div className="relative z-0">
         <Carousel />
+        <Banner/>
       </div>
 
       {/* filter  */}

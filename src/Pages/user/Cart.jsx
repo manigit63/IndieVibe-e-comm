@@ -46,7 +46,7 @@ const Cart = () => {
             return (
               <div
                 key={i}
-                className="flex items-center justify-between bg-white shadow p-4 mb-4 rounded-xl"
+                className="flex items-center justify-between  shadow p-4 mb-4 rounded-xl"
               >
                 <div className="flex items-center gap-4 w-2/3">
                   <img
@@ -94,7 +94,7 @@ const Cart = () => {
       {/* Right: Summary */}
       {user?.cart?.length > 0 && (
         <div className="md:w-1/3 mt-6 md:mt-0 sticky top-6 h-fit">
-          <div className="bg-white shadow rounded-xl p-6">
+          <div className=" shadow rounded-xl p-6">
             <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
             <div className="flex justify-between mb-2">
               <span>Total Items:</span>

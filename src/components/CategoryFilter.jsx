@@ -12,7 +12,7 @@ const categories = [
 const CategoryFilter = ({ logic }) => {
   // console.log(onSelect);
   return (
-    <div className="flex justify-center gap-4 flex-wrap">
+    <div className="flex justify-center gap-4 mt-10 flex-wrap">
       {categories.map((cat) => (
         <button
           key={cat}
