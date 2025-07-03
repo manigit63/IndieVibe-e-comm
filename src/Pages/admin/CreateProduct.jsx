@@ -18,17 +18,18 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg">
-      <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+    <div className="max-w-4xl mx-auto mt-10 p-6  rounded-2xl shadow-lg">
+      <h2 className="text-3xl font-bold text-center mb-8">
         🛠️ Create New Product
       </h2>
 
       <form
         onSubmit={handleSubmit(CreateProductHandler)}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
         {/* Image */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
+        <div className="p-4  rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold  mb-1">
             🖼️ Image URL
           </label>
           <input
@@ -40,8 +41,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Title */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
+        <div className="p-4 rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold  mb-1">
             📝 Product Name
           </label>
           <input
@@ -53,10 +54,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Price */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
-            💰 Price
-          </label>
+        <div className="p-4  rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold mb-1">💰 Price</label>
           <input
             type="number"
             step="0.01"
@@ -67,8 +66,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Category */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
+        <div className="p-4  rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold  mb-1">
             🧾 Category
           </label>
           <input
@@ -80,10 +79,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Brand */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
-            🏷️ Brand
-          </label>
+        <div className="p-4 rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold  mb-1">🏷️ Brand</label>
           <input
             type="text"
             {...register("brand")}
@@ -93,10 +90,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Model */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
-            🧪 Model
-          </label>
+        <div className="p-4  rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold  mb-1">🧪 Model</label>
           <input
             type="text"
             {...register("model")}
@@ -106,10 +101,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Color */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
-            🎨 Color
-          </label>
+        <div className="p-4  rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold  mb-1">🎨 Color</label>
           <input
             type="text"
             {...register("color")}
@@ -119,8 +112,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Discount */}
-        <div className="p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
+        <div className="p-4  rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold mb-1">
             🎁 Discount
           </label>
           <input
@@ -132,8 +125,8 @@ const CreateProduct = () => {
         </div>
 
         {/* Description - full width */}
-        <div className="md:col-span-2 p-4 bg-gray-50 rounded-xl shadow-inner">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
+        <div className="md:col-span-2 p-4 rounded-xl shadow-inner">
+          <label className="block text-sm font-semibold mb-1">
             🗒️ Description
           </label>
           <textarea
@@ -147,7 +140,8 @@ const CreateProduct = () => {
         <div className="md:col-span-2">
           <button
             type="submit"
-            className="w-full bg-black text-white py-3 px-6 rounded-xl hover:shadow-2xl transition duration-300 font-semibold">
+            className="w-full bg-amber-50 text-teal-500 py-3 px-6 rounded-xl hover:shadow-2xl transition duration-300 font-semibold"
+          >
             🚀 Create Product
           </button>
         </div>

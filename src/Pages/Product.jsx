@@ -5,6 +5,9 @@ import axiosApi from "../api/Config";
 import InfiniteScroll from "react-infinite-scroll-component";
 import useFilteredProducts from "../customHooks/useFilteredProducts";
 import ScrollEndoffer from "./offers/ScrollEndoffer";
+import CategoryFilter from "../components/CategoryFilter";
+import SortDropdown from "../components/SortDropdown";
+import Banner from "./offers/Banner";
 
 const ProductCard = lazy(() => import("../components/ProductCard"));
 

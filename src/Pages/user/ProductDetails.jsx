@@ -105,12 +105,14 @@ const DetailProduct = () => {
             <div className="flex gap-4">
               <button
                 onClick={addToCartHandler}
-                className="bg-yellow-400 hover:bg-yellow-500 px-5 py-2 text-black font-medium rounded shadow">
+                className="bg-yellow-400 hover:bg-yellow-500 px-5 py-2 text-black font-medium rounded shadow"
+              >
                 Add to Cart
               </button>
               <button
                 onClick={() => alert("Buy Now logic to be added")}
-                className="bg-green-500 hover:bg-green-600 px-5 py-2 text-white font-medium rounded shadow">
+                className="bg-green-500 hover:bg-green-600 px-5 py-2 text-white font-medium rounded shadow"
+              >
                 Buy Now
               </button>
             </div>
@@ -135,7 +137,8 @@ const DetailProduct = () => {
                   <div
                     title={p.title}
                     key={p.id}
-                    className=" p-2 mb-2 hover:shadow-2xl shadow-md  rounded">
+                    className=" p-2 mb-2 hover:shadow-2xl shadow-md  rounded"
+                  >
                     <img
                       className="h-[30vh] mx-auto block"
                       src={p.image}
@@ -156,7 +159,8 @@ const DetailProduct = () => {
 
                       <Link
                         className="text-red-400 text-sm hover:border-b "
-                        to={`/product-info/${p.id}`}>
+                        to={`/product-info/${p.id}`}
+                      >
                         More Info
                       </Link>
                     </div>
@@ -170,7 +174,8 @@ const DetailProduct = () => {
         {user?.isAdmin && (
           <form
             onSubmit={handleSubmit(updateHandler)}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
             <h2 className="text-xl font-semibold mb-6 text-amber-600 border-b pb-2">
               ✒️ Edit Product
             </h2>
@@ -291,13 +296,15 @@ const DetailProduct = () => {
             <div className="mt-6 flex gap-4">
               <button
                 type="submit"
-                className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded font-semibold">
+                className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded font-semibold"
+              >
                 Update
               </button>
               <button
                 type="button"
                 onClick={deleteHandler}
-                className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded font-semibold">
+                className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded font-semibold"
+              >
                 Delete
               </button>
             </div>

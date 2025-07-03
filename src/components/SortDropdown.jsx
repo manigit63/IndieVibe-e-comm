@@ -2,7 +2,7 @@ import React from "react";
 
 const SortDropdown = ({ value, logic }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center mt-10 gap-2">
       <label htmlFor="sortBy" className="text-sm font-medium">
         Sort by:
       </label>
