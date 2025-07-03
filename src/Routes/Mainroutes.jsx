@@ -12,20 +12,52 @@ import Auth from "./Auth";
 import UnAuth from "./UnAuth";
 import PagenotFound from "../Pages/user/PagenotFound";
 import ProductDetails from "../Pages/user/ProductDetails";
+import Layout from "../components/Layout";
+import Home from "../Pages/Home";
 
 const Mainroutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Product />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/product-info/:id" element={<ProductDetails />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="product-info/:id" element={<ProductDetails />} />
+          <Route path="contact" element={<Contact />} />
 
+          {/* Auth Routes */}
+          <Route
+            path="settings"
+            element={
+              <Auth>
+                <UserSetting />
+              </Auth>
+            }
+          />
+          <Route
+            path="create-product"
+            element={
+              <Auth>
+                <CreateProduct />
+              </Auth>
+            }
+          />
+          <Route
+            path="cart"
+            element={
+              <Auth>
+                <Cart />
+              </Auth>
+            }
+          />
 
-        {/* Auth Routes */}
+          {/* wildcard */}
+          <Route path="*" element={<PagenotFound />} />
+        </Route>
+
+        {/* outside layout  */}
         <Route
-          path="/signup"
+          path="signup"
           element={
             <UnAuth>
               <Signup />
@@ -33,40 +65,13 @@ const Mainroutes = () => {
           }
         />
         <Route
-          path="/signin"
+          path="signin"
           element={
             <UnAuth>
               <Signin />
             </UnAuth>
           }
         />
-        <Route
-          path="settings"
-          element={
-            <Auth>
-              <UserSetting />
-            </Auth>
-          }
-        />
-        <Route
-          path="/create-product"
-          element={
-            <Auth>
-              <CreateProduct />
-            </Auth>
-          }
-        />
-        <Route
-          path="/cart"
-          element={
-            <Auth>
-              <Cart />
-            </Auth>
-          }
-        />
-
-        {/* wildcard */}
-        <Route path="*" element={<PagenotFound />} />
       </Routes>
     </div>
   );
