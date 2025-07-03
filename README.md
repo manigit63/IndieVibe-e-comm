@@ -1,3 +1,25 @@
+task :  : 
+
+prni >>> 
+1. nav ko si karna h , line jo a rhi transition lgana h  
+2. menu add karna h 
+3. responsive p kaam karna h 
+4. banner me usko dark mode s align karna && margin-top usko km karna h 
+8. GSAP apply in FOoter banner 
+9. user setting page me clr p kaam karna h && dark mode apply karna h
+
+mani >>> 
+
+5. search kare to product dikhe banner & carausel hide ho jaye
+6. filter and sort ko sticky karna h
+7. pagination apply
+
+later >>>>>>>>>>>>>>>>
+10. backend pe kaam karn a
+11. json server deploy
+
+
+
 Developer Standared
 
 layot 
