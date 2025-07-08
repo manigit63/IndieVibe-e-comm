@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:3001/",
+  baseURL: "https://indievibe-backend-9e9e.onrender.com",
 });
 
 export default instance;
