@@ -47,7 +47,7 @@ const About = () => {
             Start Shopping
           </Link>
           <Link
-            className="bg-gray-700 hover:bg-gray-800  px-6 py-2 rounded-full shadow-md transition duration-200"
+            className="bg-gray-700 hover:bg-gray-800 git  px-6 py-2 rounded-full shadow-md transition duration-200"
             to="/contact"
           >
             Contact Us
