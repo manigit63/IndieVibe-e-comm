@@ -42,12 +42,12 @@ const UserSetting = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[90vh] bg-gray-100">
+    <div className="flex justify-center items-center min-h-[90vh] ">
       <form
         onSubmit={handleSubmit(updateHandler)}
-        className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md space-y-5"
+        className=" p-8 rounded-2xl shadow-lg w-full max-w-md space-y-5 shadow-amber-50 "
       >
-        <h2 className="text-2xl font-bold text-center text-gray-800">
+        <h2 className="text-2xl font-bold text-center ">
           User Settings
         </h2>
 
@@ -55,21 +55,21 @@ const UserSetting = () => {
           type="text"
           placeholder="Username"
           {...register("username")}
-          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-amber-400"
         />
 
         <input
           type="email"
           placeholder="Email"
           {...register("email")}
-          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-amber-400"
         />
 
         <input
           type="password"
           placeholder="Password"
           {...register("password")}
-          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-amber-400"
         />
 
         <div className="flex justify-between gap-3 pt-2">

@@ -4,10 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { asyncAddCartProducts } from "../store/actions/UserAction";
 
 const ProductCard = ({ p }) => {
-  const {user} = useSelector((state) => state.userReducer);
+  const { user } = useSelector((state) => state.userReducer);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // console.log(p);
 
   const addToCartHandler = async () => {
     if (!user) return navigate("/signin");
@@ -19,31 +18,39 @@ const ProductCard = ({ p }) => {
   };
 
   return (
-    <div
-      title={p.title}
-      key={p.id}
-      className="w-[22%] p-2 mb-2 hover:shadow-2xl hover:scale-105 transition-all shadow-md  rounded">
-      <img className="h-[30vh] mx-auto block" src={p.image} alt="" />
-      <h1 className="mt-3 text-2xl">{p.title.slice(0, 15)}...</h1>
-      <p className="text-red-400 font-semibold">
-        <span className="text-sm font-semibold  align-super leading-none">
-          ₹
-        </span>{" "}
-        {p.price}
-      </p>
-      <p>{p.description.slice(0, 80)}...</p>
-      <div className="mt-2 p-2 w-full flex justify-between items-center">
-        <button
-          onClick={addToCartHandler}
-          className="bg-amber-300 px-2 py-1 rounded hover:bg-amber-400">
-          Add to Cart
-        </button>
+    <div className="bg-white rounded-lg shadow hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+      <div className="bg-white h-48 w-[90%] mx-auto flex items-center justify-center p-2">
+        <img
+          src={p.image}
+          alt={p.title}
+          className="max-h-full object-contain"
+        />
+      </div>
 
-        <Link
-          className="text-red-400 text-sm hover:border-b "
-          to={`/product-info/${p.id}`}>
-          More Info
-        </Link>
+      <div className="px-4 pb-4">
+        <h2 className="text-base text-zinc-700  font-semibold mt-2 truncate">
+          {p.title.slice(0, 40)}
+        </h2>
+
+        <p className="text-red-500 font-semibold text-sm mt-1">₹{p.price}</p>
+
+        <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+          {p.description}
+        </p>
+
+        <div className="mt-4 flex justify-between items-center">
+          <button
+            onClick={addToCartHandler}
+            className="bg-amber-400 text-xs px-3 py-1 rounded hover:bg-amber-500 transition">
+            Add to Cart
+          </button>
+
+          <Link
+            to={"/product-info/${p.id}"}
+            className="text-red-400 text-xs underline hover:text-red-500 transition">
+            More Info
+          </Link>
+        </div>
       </div>
     </div>
   );
