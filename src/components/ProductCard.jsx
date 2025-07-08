@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { asyncAddCartProducts } from "../store/actions/UserAction";
 
 const ProductCard = ({ p }) => {
+ 
   const { user } = useSelector((state) => state.userReducer);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const ProductCard = ({ p }) => {
           </button>
 
           <Link
-            to={"/product-info/${p.id}"}
+            to={`/product-info/${p.id}`}
             className="text-red-400 text-xs underline hover:text-red-500 transition">
             More Info
           </Link>
